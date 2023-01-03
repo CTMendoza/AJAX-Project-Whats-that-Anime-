@@ -8,11 +8,24 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
-  <header>
+  <header class="navbar">
+    <nav class="flex">
+      <h1>What's That Anime?</h1>
+    </nav>
   </header>
   <main>
+    <div class="flex justify-center marg-10per">
+      <form action="" class="half-width flex" id="searchanime">
+        <input type="text" name="" id="anime" placeholder="Search Anime..." class="full-width search-box">
+        <button type="submit">
+          <i class="fa fa-xl fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <ul></ul>
+    </div>
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>

@@ -1,0 +1,16 @@
+header {
+  background-color: #f8333c;
+}
+
+body {
+  background-color: #dbd5b5;
+}
+
+button {
+  width: 10%;
+}
+
+.search-box {
+  height: 50px;
+  font-size: 25px;
+}

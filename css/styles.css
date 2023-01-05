@@ -3,14 +3,44 @@ header {
 }
 
 body {
-  background-color: #dbd5b5;
+  background-color: #374a67;
 }
 
 button {
   width: 10%;
 }
 
+h1 {
+  font-family: "Luckiest Guy", cursive;
+  margin-left: 2em;
+}
+
+input {
+  font-family: Staatliches, cursive;
+}
+
 .search-box {
   height: 50px;
   font-size: 25px;
+}
+
+.thumbnail {
+  margin-bottom: 1rem;
+  border: 1px solid rgb(199 199 199);
+  border-radius: 0.25rem;
+  box-shadow: 0 6px 6px -4px rgb(0 0 0 / 30%);
+  background-color: white;
+}
+
+.thumbnail-title {
+  padding: 1 rem;
+}
+
+.thumbnail-img {
+  width: 100%;
+}
+
+.h3-title {
+  text-align: center;
+  font-family: Staatliches, cursive;
 }

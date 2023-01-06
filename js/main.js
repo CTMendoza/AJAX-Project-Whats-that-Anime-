@@ -1,11 +1,18 @@
 // query selecting the input element type text that holds the value of the anime title entered by the user
 var $animeTitle = document.querySelector('#anime');
 // a function to create a new XMLHttpRequest to get anime data based on the string value of the input element above
-var animeDataReq = new XMLHttpRequest();
 function getReq(title) {
+  var animeDataReq = new XMLHttpRequest();
   animeDataReq.open('GET', 'https://api.jikan.moe/v4/anime?letter=' + title);
   animeDataReq.responseType = 'json';
   animeDataReq.send();
+  // add an addEventlistener for the load event to update the dom to create thumbnails of the anime the user searched for
+  animeDataReq.addEventListener('load', function () {
+    for (var i = 0; i < animeDataReq.response.data.length; i++) {
+      var tbRender = renderThumbnails(animeDataReq.response.data[i]);
+      $thumbnailContainer.appendChild(tbRender);
+    }
+  });
 }
 
 // an addEventlistener for the submit event on the form element that will execute a GET request
@@ -39,10 +46,3 @@ function renderThumbnails(anime) {
   $thumbnail.appendChild($thumbnailImg);
   return $colThirdDiv;
 }
-// add an addEventlistener for the load event to update the dom to create thumbnails of the anime the user searched for
-animeDataReq.addEventListener('load', function () {
-  for (var i = 0; i < animeDataReq.response.data.length; i++) {
-    var tbRender = renderThumbnails(animeDataReq.response.data[i]);
-    $thumbnailContainer.appendChild(tbRender);
-  }
-});

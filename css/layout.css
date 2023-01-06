@@ -1,0 +1,58 @@
+.nav-marg {
+  margin-right: 5%;
+  margin-left: 1%;
+}
+
+.navbar {
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.half-width {
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.marg-5per {
+  margin-top: 5%;
+}
+
+@media screen and (min-width: 861px) {
+  .half-width {
+    width: 50%;
+  }
+
+  .thumbnail-container {
+    width: 850px;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .col-third {
+    flex-basis: calc(100% / 3);
+    padding: 0 0.5rem;
+  }
+}
+
+.thumbnail-container {
+  max-width: 850px;
+  margin: 2rem auto;
+}
+
+.col-third {
+  max-width: 283px;
+  padding: 0 0.5rem;
+  margin: auto;
+}
